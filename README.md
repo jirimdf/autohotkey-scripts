@@ -27,7 +27,7 @@ A collection of small AutoHotkey scripts that automate repetitive tasks in games
 
 ## DD2 Inventory Cleaner
 
-`DD2_Inventory_Cleanup/LupusClear.ahk`
+`DD2_Inventory_Cleanup/MDFClear.ahk`
 
 After pressing **End**, the script moves the mouse cursor slot by slot across the Dungeon Defenders 2 inventory grid (7 columns × 8 rows) with a short pause on each slot. While the cursor is over an item, press **S** to sell it.
 
@@ -35,7 +35,7 @@ After pressing **End**, the script moves the mouse cursor slot by slot across th
 
 **Usage**
 
-1. Run `LupusClear.ahk`.
+1. Run `MDFClear.ahk`.
 2. Open your inventory in the game and press **End**.
 3. Press **S** to sell the highlighted items.
 
@@ -47,13 +47,13 @@ The grid size, the spacing between slots and the delay can be changed in the scr
 
 A simple GUI utility that automatically presses a key at a regular interval. There are two versions:
 
-**`HotkeyLooper/LupusLooper.ahk` (v1)**
+**`HotkeyLooper/MDFLooper.ahk` (v1)**
 
 - GUI with **Start** and **Stop** buttons
 - After clicking **Start**, the script presses **G** every 5 seconds
 - Stop it with the **Stop** button or the **Esc** key
 
-**`HotkeyLooper/LupusLooperV2.ahk` (v2)**
+**`HotkeyLooper/MDFLooperV2.ahk` (v2)**
 
 - GUI with **Start**, **Pause**, **Stop** and close buttons
 - The **End** key toggles the loop on and off
