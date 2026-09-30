@@ -1,25 +1,31 @@
-﻿#NoEnv
-#Warn
-SendMode Input
+﻿#Requires AutoHotkey v2.0
+#SingleInstance Force
+SendMode "Input"
 
-Gui, Add, Button, w100 h30 gStart, Start
-Gui, Add, Button, w100 h30 gStop, Stop
-Gui, Show, w200 h100, AutoHotkey GUI
+Key := "g"
+Interval := 5000
 
-return
+MyGui := Gui(, "AutoHotkey GUI")
+StartBtn := MyGui.Add("Button", "w100 h30", "Start")
+StopBtn := MyGui.Add("Button", "w100 h30", "Stop")
+StartBtn.OnEvent("Click", Start)
+StopBtn.OnEvent("Click", (*) => ExitApp())
+MyGui.OnEvent("Close", (*) => ExitApp())
+MyGui.OnEvent("Escape", (*) => ExitApp())
+MyGui.Show("w200 h100")
 
-Start:
-GuiControl, Disable, Start
-Loop
-{
-  Send, g
-  Sleep, 5000
-  If GetKeyState("Esc", "P")
-    break
+Start(*) {
+    StartBtn.Enabled := false
+    PressKey()
+    SetTimer PressKey, Interval
 }
-GuiControl, Enable, Start
-return
 
-Stop:
-GuiEscape:
-ExitApp
+PressKey() {
+    Send Key
+}
+
+; Esc stops the loop, the key still works normally in other windows
+~Esc:: {
+    SetTimer PressKey, 0
+    StartBtn.Enabled := true
+}

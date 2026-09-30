@@ -10,11 +10,11 @@ A collection of small AutoHotkey scripts that automate repetitive tasks in games
 ## Requirements
 
 - Windows
-- [AutoHotkey](https://www.autohotkey.com/)
+- [AutoHotkey v2](https://www.autohotkey.com/)
 
 ## Getting started
 
-1. Install AutoHotkey.
+1. Install AutoHotkey v2.
 2. Clone or download this repository:
 
    ```bash
@@ -39,27 +39,27 @@ After pressing **End**, the script moves the mouse cursor slot by slot across th
 2. Open your inventory in the game and press **End**.
 3. Press **S** to sell the highlighted items.
 
-The grid size, the spacing between slots and the delay can be changed in the script. You may need to adjust them to match your screen resolution.
+The grid size, the spacing between slots and the delay can be changed in the variables at the top of the script. You may need to adjust them to match your screen resolution.
 
 ---
 
 ## HotkeyLooper
 
-A simple GUI utility that automatically presses a key at a regular interval. There are two versions:
+A simple GUI utility that automatically presses a key at a regular interval. There are two variants:
 
-**`HotkeyLooper/MDFLooper.ahk` (v1)**
+**`HotkeyLooper/MDFLooper.ahk` (basic)**
 
 - GUI with **Start** and **Stop** buttons
 - After clicking **Start**, the script presses **G** every 5 seconds
-- Stop it with the **Stop** button or the **Esc** key
+- **Esc** stops the loop, the **Stop** button closes the script
 
-**`HotkeyLooper/MDFLooperV2.ahk` (v2)**
+**`HotkeyLooper/MDFLooperV2.ahk` (advanced)**
 
 - GUI with **Start**, **Pause**, **Stop** and close buttons
 - The **End** key toggles the loop on and off
 - In each cycle the script switches windows with **Alt+Tab** and presses **G**, every 5 seconds, so it can keep two windows active at the same time
 
-The key and the interval can be changed in the script.
+The key and the interval can be changed at the top of the script.
 
 ---
 
