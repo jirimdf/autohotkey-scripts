@@ -31,7 +31,7 @@ A collection of small AutoHotkey scripts that automate repetitive tasks in games
 
 After pressing **End**, the script moves the mouse cursor slot by slot across the Dungeon Defenders 2 inventory grid (7 columns × 8 rows) with a short pause on each slot. While the cursor is over an item, press **S** to sell it.
 
-![DD2 Inventory Cleaner](https://github.com/jirimdf/DD2_Inventory_Cleanup/assets/163419314/d3abd0a7-20ff-4775-b764-6fb080b161f6)
+![DD2 Inventory Cleaner](DD2_Inventory_Cleanup/demo.gif)
 
 **Usage**
 
